@@ -25,8 +25,7 @@
                 {{ issue.answer }}
 
                 <br><br>
-
-                {% for tag in issue.tag_set.all %}
+                {% for tag in issue.tags.all %}
                     <a href="{{tag.name}}" class="btn btn-default btn-xs">{{ tag.name }}</a>
                 {% endfor %}
                 <hr>
