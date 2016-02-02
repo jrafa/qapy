@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <p>Pytania i odpowiedzi</p>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div  class="col-md-8">
+            <br>
+            <ul class="list-issue">
+                {% for issue in issues %}
+                    <li><a href="#django">{{ issue.title }}</a></li>
+                {% endfor %}
+            </ul>
+
+            <br><hr><br>
+
+            {% for issue in issues %}
+                <strong><a name="django" class="issue-title">{{ issue.title }}</a></strong>
+                <em>{{ issue.date_add|date:"D d M Y" }}</em>
+
+                <br><br>
+
+                {{ issue.answer }}
+
+                <br><br>
+
+                {% for tag in issue.tag_set.all %}
+                    <a href="{{tag.name}}" class="btn btn-default btn-xs">{{ tag.name }}</a>
+                {% endfor %}
+                <hr>
+
+            {% endfor %}
+
+        </div>
+        <div class="col-md-4">
+            <br>
+            {% for tag in tags %}
+                <a href="{{tag.name}}" class="btn btn-success btn-xs">{{ tag.name }}</a>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

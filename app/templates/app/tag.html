@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <p>
+        <a href="{% url 'index' %}" class="home-icon btn btn-default btn-xs">
+            <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+        </a>
+        {{ tag }}
+    </p>
+{% endblock %}
+{% block content %}
+    <div class="row">
+        <div  class="col-md-8">
+            <br>
+            {% for issue in issues %}
+                {% for item in issue.get_issue %}
+                    <strong>{{ item.title }}</strong>
+                    <em>{{ item.date_add|date:"D d M Y"}}</em>
+                    <br><br>
+                    {{ item.answer }}
+                    <br><hr><br>
+                {% endfor %}
+            {% endfor %}
+        </div>
+        <div class="col-md-4">
+            <br>
+            {% for tag in tags %}
+                <a href="{{tag.name}}" class="btn btn-success btn-xs">{{ tag.name }}</a>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

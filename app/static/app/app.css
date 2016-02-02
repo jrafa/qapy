@@ -1,0 +1,38 @@
+p {
+    width: auto;
+    height: 40px;
+    padding: 10px 65px;
+    background: #50C878;
+    color: white;
+    line-height: 20px;
+    overflow: hidden;
+    font-size: 1.3em;
+}
+
+div.row {
+    margin-left: 50px;
+}
+
+em {
+    float: right;
+}
+
+ul.list-issue {
+    margin-left: -20px;
+}
+
+a.issue-title {
+    text-decoration: none;
+    color: black;
+}
+
+.home-icon {
+    background: #50C878;
+    border-color: #50C878;
+    color: white;
+}
+
+.btn-success {
+    background-color: #50C878;
+    border-color: #50C878;
+}
