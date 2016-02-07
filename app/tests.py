@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 '''
-Module tests.
+Tests module.
 '''
 import json
 

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 '''
-Module serializers.
+Serializers module.
 '''
 from rest_framework import serializers
 from .models import Issue, Tag
