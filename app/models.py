@@ -1,6 +1,6 @@
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 '''
-Module model.
+Models module.
 '''
 from __future__ import unicode_literals
 
@@ -31,7 +31,7 @@ class Tag(models.Model):
 
     def get_issue(self):
         """
-        TODO
+        This method return issues by tag.
         :return:
         """
         return [item for item in self.issue.all()]

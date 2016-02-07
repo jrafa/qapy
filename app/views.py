@@ -11,7 +11,7 @@ from .serializers import IssueTagsSerializer, TagSerializer
 # Create your views here.
 class IssuesView(TemplateView):
     '''
-    View shows question and answer with tags.
+    This view shows question and answer with tags.
     '''
     template_view = 'app/index.html'
 
@@ -23,7 +23,7 @@ class IssuesView(TemplateView):
 
 class TagView(TemplateView):
     '''
-    View shows issue filter by tag.
+    This view shows issue filter by tag.
     '''
     template_view = 'app/tag.html'
 
@@ -35,7 +35,7 @@ class TagView(TemplateView):
 
 class ListIssuesViewSet(viewsets.ModelViewSet): # pylint: disable=too-many-ancestors
     '''
-    This API view shows issues with tags.
+    This API view shows issues and tags.
     '''
     serializer_class = IssueTagsSerializer
     queryset = Issue.objects.all()
@@ -43,7 +43,7 @@ class ListIssuesViewSet(viewsets.ModelViewSet): # pylint: disable=too-many-ances
 
 class ListTagsIssuesViewSet(viewsets.ModelViewSet): # pylint: disable=too-many-ancestors
     '''
-    This API view shows issues with tags.
+    This API view shows issues and tags.
     '''
     serializer_class = TagSerializer
     queryset = Tag.objects.all().prefetch_related('issue')

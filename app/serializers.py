@@ -1,5 +1,6 @@
+# -*- coding: utf-8 -*-
 '''
-TODO
+Module serializers.
 '''
 from rest_framework import serializers
 from .models import Issue, Tag
@@ -7,7 +8,7 @@ from .models import Issue, Tag
 
 class IssueSerializer(serializers.ModelSerializer):
     '''
-    TODO
+    Issue serializer.
     '''
     class Meta:
         model = Issue
@@ -16,7 +17,7 @@ class IssueSerializer(serializers.ModelSerializer):
 
 class IssueTagsSerializer(serializers.ModelSerializer):
     '''
-    TODO
+    Issue and Tags serializer.
     '''
     tags = serializers.StringRelatedField(many=True)
 
@@ -27,7 +28,7 @@ class IssueTagsSerializer(serializers.ModelSerializer):
 
 class TagSerializer(serializers.ModelSerializer):
     '''
-    TODO
+    Tag serializer.
     '''
     issue = IssueSerializer(many=True)
 

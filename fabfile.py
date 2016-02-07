@@ -7,3 +7,7 @@ def run():
 
 def lint():
     local('pylint --load-plugins pylint_django app/')
+
+
+def test():
+    local('python manage.py test')
