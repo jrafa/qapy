@@ -101,3 +101,11 @@ Temporary Items
 
 # SQLite3 DB
 db.sqlite3
+
+# settings production, devel
+settings_development.py
+settings_production.py
+
+# static admin, rest files
+app/static/admin/*
+app/static/rest_framework/*

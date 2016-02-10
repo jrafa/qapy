@@ -11,6 +11,7 @@ p {
 
 div.row {
     margin-left: 50px;
+    margin-right: 0px;
 }
 
 em {
@@ -33,6 +34,21 @@ a.issue-title {
 }
 
 .btn-success {
+    background-color: #50C878;
+    border-color: #50C878;
+}
+
+.btn-success:hover {
+    background-color: #50C878;
+    border-color: #50C878;
+}
+
+.btn-success:focus {
+    background-color: #50C878;
+    border-color: #50C878;
+}
+
+.btn-success.active:focus, .btn-success:active:focus {
     background-color: #50C878;
     border-color: #50C878;
 }
